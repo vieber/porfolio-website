@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact me</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+    <div id="overlay"></div>
+    <header>
+        <nav class="main-nav">
+            <a href="index.html"> <img class="logo" src="Images/logo1.svg"> </a>
+            <ul class="main-menu">
+                <li><a class="sections-navbar" href="work.html">WORK</a></li>
+                <li><a class="sections-navbar" href="about.html">ABOUT</a></li>
+                <li><a class="sections-navbar" href="contact.html">CONTACT</a></li>
+            </ul>
+            <ul class="right-menu">
+                <li>
+                    <a class="sections-navbar" href="https://www.facebook.com/profile.php?id=100090015505351"
+                        target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a class="sections-navbar" href="https://www.instagram.com/_vieber_/" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+        </nav>
+        <a class="sections-navbar" id="iconn" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </header>
+
+
+
+    <section>
+        <h1>LET'S TALK ABOUT<br>THE NEXT BIG THING</h1>
+        <div class="content-container" id="contact">
+            <div id="contact-fill"> Please feel free to leave me a message via the form, or you can reach out to me
+                directly via email at nngthvi@gmail.com.
+                <br><br>
+                Let's turn our collaboration into a masterpiece of creativity!
+            </div>
+        </div>
+    </section>
+
+    <div class="content-container">
+        <div class="container">
+            <form id="contact-form">
+                <!-- Name -->
+                <label class="contact-form-text" for="user_name">name*</label>
+                <input type="text" id="user_name" name="user_name" required />
+                <!-- Mail -->
+                <label class="contact-form-text" for="user_email">your email*</label>
+                <input type="text" id="user_email" name="user_email" required />
+
+                <label class="contact-form-text" for="message">message*</label>
+                <textarea id="message" name="message" style="height:200px" required></textarea>
+
+                <input class="contact-form-text" id="submit-btn" type="submit" value="submit" />
+
+            </form>
+        </div>
+    </div>
+
+
+    <a class="title-link" href="#top">
+        <p class="back-to-top">back to top</p>
+    </a>
+
+
+</body>
+
+</html>

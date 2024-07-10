@@ -1,0 +1,1185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body#homepage {
+    background-color: #012F05;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #FFFCF7;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    ::selection {
+        background: #012F05;
+        color: #FFFCF7
+    }
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #012F05;
+    /* Adjust the background color and opacity as needed */
+    z-index: 999;
+    /* Make sure it's above other elements */
+}
+
+/*********** NAVBAR *********************/
+.sections-navbar {
+    text-decoration: none;
+    color: #FFFCF7;
+}
+
+#iconn {
+    display: none
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    position: fixed;
+    width: 100%;
+    margin: auto;
+    z-index: 1000;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 7vw;
+    padding: 0 10vw;
+    font-size: 1.05rem;
+    font-weight: 600;
+    background-color: #012F05;
+}
+
+.right-menu {
+    font-size: 1.8vw;
+}
+
+.main-nav .logo {
+    width: 80%;
+    height: auto;
+}
+
+.main-nav ul {
+    display: flex
+}
+
+.main-nav ul li {
+    padding: 0 2vw;
+}
+
+.main-nav ul li a:hover {
+    color: #E80E5B;
+}
+
+/***********HERO SECTION *********************/
+.herosection {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #FFF6E6;
+    line-height: 1.5;
+    position: fixed;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/***********DRAGGABLE ELEMENTS *********************/
+#container {
+    position: relative;
+}
+
+.draggable {
+    position: absolute;
+    cursor: move;
+}
+
+#draggable-elem1 {
+    position: fixed;
+    transform: rotate(-10deg);
+    left: 60%;
+    top: 63%;
+}
+
+#draggable-elem2 {
+    position: fixed;
+    left: 72%;
+    top: 14%;
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.herosection {
+    ::selection {
+        background: #E80E5B;
+        color: black
+    }
+}
+
+#draggable-elem3 {
+    position: fixed;
+    left: 15%;
+    top: 24%;
+}
+
+#draggable-elem4 {
+    position: fixed;
+    left: 5%;
+    top: 45%;
+    animation-name: spin-green;
+    animation-duration: 7000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+@keyframes spin-green {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#draggable-elem5 {
+    position: fixed;
+    left: 25%;
+    top: 69%;
+}
+
+#draggable-elem6 {
+    position: fixed;
+    left: 80%;
+    top: 55%;
+}
+
+#draggable-elem7 {
+    position: fixed;
+    left: 30%;
+    top: 60%;
+}
+
+#draggable-elem8 {
+    position: fixed;
+    left: -11%;
+    bottom: -22%;
+}
+
+#draggable-elem9 {
+    position: fixed;
+    left: -9%;
+    top: 10%;
+}
+
+
+
+/*********** WORK PAGE *********************/
+h1 {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    padding-top: 10vw;
+    margin-bottom: 4vw;
+    font-size: 2.8rem;
+    color: #012F05;
+}
+
+/* .projects{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;} */
+
+.works {
+    position: relative;
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2%;
+}
+
+.hashtags {
+    box-sizing: border-box;
+    display: inline-block;
+    height: 40px;
+    width: auto;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 3vw;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.workimages {
+    margin-bottom: 1.3vw;
+}
+
+.title-link {
+    text-decoration: none;
+    color: black;
+}
+
+.title-link:hover {
+    text-decoration-line: underline;
+}
+
+.project-names {
+    margin-bottom: 1.2vw;
+    font-size: 2.3vw;
+    font-weight: 600;
+}
+
+.number {
+    margin-bottom: 0.9vw;
+    font-size: 1vw;
+    font-weight: 400;
+}
+
+
+/*********** PROJECT DETAIL *********************/
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vw;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.workimages {
+    transition: transform 0.3s ease-in-out;
+}
+
+.workimages:hover {
+    transform: scale(1.05);
+}
+
+.detail-number {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.content-container {
+    width: 80%;
+    margin: auto
+}
+
+.project-about {
+    padding: 3vw 0 4vw 0;
+    font-size: 2.3vw;
+    font-weight: 600;
+    text-align: center;
+}
+
+.credit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.5rem;
+    gap: 4vw;
+    padding: 3vw 0 4vw 0;
+}
+
+/***********ABOUT PAGE *********************/
+.column-left {
+    font-weight: 600;
+}
+
+#row-one-about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vw;
+}
+
+.content-about {
+    font-size: 1.5rem;
+    line-height: normal;
+    text-align: center;
+    text-transform: lowercase;
+    padding-bottom: 4vw;
+}
+
+.back-to-top {
+    margin: 10vw 0 3vw 0;
+    text-align: center;
+}
+
+#color {
+    color: #E80E5B
+}
+
+
+#aboutpage {
+    text-align: left;
+}
+
+#about1 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.aboutimages {
+    width: 90%;
+}
+
+#about1 {
+    margin-bottom: 8vw;
+}
+
+#below-about {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: 2.1rem;
+    color: #E48F2B;
+    font-weight: 700;
+    margin-bottom: 3vw;
+}
+
+.content-main {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.card-about-title {
+    display: grid;
+    gap: 1.2vw;
+}
+
+.content-strength {
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 3vw;
+}
+
+
+/*********** CONTACT PAGE *********************/
+#contact-fill {
+    font-size: 1.3rem;
+    line-height: normal;
+    text-transform: lowercase;
+    padding-bottom: 4vw;
+    text-align: left;
+    width: 75%;
+}
+
+.contact-form-text {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 0.07rem solid #838383;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    margin-top: 1rem;
+    margin-bottom: 1.4rem;
+    resize: vertical
+}
+
+input[type=submit] {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #012F05;
+    color: white;
+    margin-top: 3rem;
+    padding: 0.6rem 3rem;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #0A5612;
+}
+
+
+/* Tablet devices */
+@media screen and (max-width: 768px) {
+
+    /* Home Page Tablet */
+    .main-nav {
+        height: 9vw;
+        padding: 0 4vw;
+        font-size: 0.875rem;
+        background-color: #012F05;
+    }
+
+    .right-menu {
+        font-size: 1.49075rem;
+    }
+
+    .main-nav .logo {
+        width: 2.625rem;
+        height: auto;
+    }
+
+    /***********HERO SECTION *********************/
+    .herosection {
+        width: 85%;
+        margin: auto;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #FFF6E6;
+        line-height: 1.5;
+        position: fixed;
+        line-height: 2.5625rem;
+        top: 47%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /***********DRAGGABLE ELEMENTS *********************/
+
+    #draggable-elem1 {
+        position: fixed;
+        transform: rotate(-10deg);
+        left: 60%;
+        top: 60%;
+    }
+
+    #draggable-elem2 {
+        position: fixed;
+        left: 72%;
+        top: 17%;
+        animation-name: spin;
+        animation-duration: 5000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .herosection {
+        ::selection {
+            background: #E80E5B;
+            color: black
+        }
+    }
+
+    #draggable-elem3 {
+        position: fixed;
+        left: 24%;
+        top: 24%;
+    }
+
+    #draggable-elem4 {
+        width: 25%;
+        height: auto;
+        position: fixed;
+        left: 5%;
+        top: 55%;
+        animation-name: spin-green;
+        animation-duration: 7000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: reverse;
+    }
+
+    @keyframes spin-green {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    #draggable-elem5 {
+        position: fixed;
+        left: 49%;
+        top: 75%;
+
+    }
+
+    #draggable-elem6 {
+        width: 30%;
+        height: auto;
+        position: fixed;
+        left: 69%;
+        top: 74%;
+    }
+
+    #draggable-elem7 {
+        position: fixed;
+        left: 19%;
+        top: 58%;
+        z-index: -1;
+        width: 60%;
+        height: auto;
+    }
+
+    #draggable-elem8 {
+        position: fixed;
+        left: -15%;
+        bottom: -18%;
+    }
+
+
+    #draggable-elem9 {
+        position: fixed;
+        left: -18%;
+        top: 10%;
+    }
+
+    /*********** WORK PAGE *********************/
+    h1 {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        padding-top: 14vw;
+        margin-bottom: 4vw;
+        font-size: 1.875rem;
+        color: #012F05;
+    }
+
+    .works {
+        position: relative;
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2%;
+    }
+
+    .hashtags {
+        box-sizing: border-box;
+        display: inline-block;
+        height: 40px;
+        width: auto;
+        border: 1px solid #000;
+        text-align: center;
+        padding: 10px;
+        border-radius: 1.25rem;
+        margin-bottom: 3vw;
+        font-size: 1rem;
+    }
+
+    .workimages {
+        margin-bottom: 1.3vw;
+    }
+
+    .title-link {
+        text-decoration: none;
+        color: black;
+    }
+
+    .title-link:hover {
+        text-decoration-line: underline;
+    }
+
+    .project-names {
+        margin-bottom: 1.2vw;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .number {
+        margin-bottom: 0.9vw;
+        font-size: 0.8125rem;
+        font-weight: 400;
+    }
+
+    /***********ABOUT PAGE *********************/
+    .content-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .content-about {
+        font-size: 1rem;
+        line-height: normal;
+        text-align: center;
+        text-transform: lowercase;
+        padding-bottom: 4vw;
+    }
+
+    #row-one-about {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10vw;
+    }
+
+    .back-to-top {
+        margin: 10vw 0 3vw 0;
+        text-align: center;
+    }
+
+
+    #about1 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 1rem;
+    }
+
+    .aboutimages {
+        width: 100%;
+    }
+
+    #about1 {
+        margin-bottom: 1rem;
+    }
+
+    #below-about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-title {
+        font-size: 1.25rem;
+        color: #E48F2B;
+        font-weight: 700;
+        margin-bottom: 3vw;
+    }
+
+    .content-main {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .card-about-title {
+        display: grid;
+        gap: 1.7vw;
+    }
+
+    .content-strength {
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 4vw;
+    }
+
+    /*********** CONTACT PAGE *********************/
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 0.07rem solid #838383;
+        background-color: transparent;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        margin-top: 0.6rem;
+        margin-bottom: 1.6rem;
+        resize: vertical
+    }
+
+    input[type=submit] {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #012F05;
+        color: white;
+        margin-top: 1.5rem;
+        padding: 0.6rem 3rem;
+        border: none;
+        border-radius: 18px;
+        cursor: pointer;
+    }
+
+    #contact-fill {
+        font-size: 1rem;
+        line-height: normal;
+        text-transform: lowercase;
+        padding-bottom: 2.5rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    .contact-form-text {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
+    /*********** PROJECT DETAIL *********************/
+
+    .images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1vw;
+    }
+
+    .detail-number {
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .content-container {
+        width: 90%;
+        margin: auto
+    }
+
+    .project-about {
+        padding: 3vw 0 4vw 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .credit {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 1rem;
+        gap: 6vw;
+        padding: 3vw 0 4vw 0;
+    }
+
+
+
+    .back-to-top {
+        margin: 10vw 0 5vw 0;
+        text-align: center;
+        font-size: 0.875rem;
+    }
+
+}
+
+
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    .main-nav {
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        height: 6.125rem;
+        padding: 0 4vw;
+        font-size: 0.875rem;
+        background-color: #012F05;
+        gap: 8vw;
+    }
+
+    .main-menu {
+        margin-top: 30%;
+        padding-bottom: 70%;
+        flex-direction: column;
+        gap: 10vw;
+        font-size: 2.7rem;
+    }
+
+    .main-menu li {
+        margin-right: 100px;
+    }
+
+    .right-menu {
+        font-size: 1.49075rem;
+        flex-direction: row;
+        gap: 4vw;
+    }
+
+    .main-nav .logo {
+        margin-top: 11vw;
+        width: 2.625rem;
+        height: auto;
+    }
+
+    ul.main-menu {
+        display: none;
+    }
+
+    ul.right-menu {
+        display: none;
+    }
+
+    #iconn {
+        display: block;
+        position: fixed;
+        right: 6%;
+        top: 5%;
+        font-size: 1.5rem;
+    }
+
+
+    /***********HERO SECTION *********************/
+    .herosection {
+        width: 85%;
+        margin: auto;
+        text-align: center;
+        font-size: 0.875rem;
+        color: #FFF6E6;
+        position: fixed;
+        line-height: 1.54875rem;
+        top: 47%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /***********DRAGGABLE ELEMENTS *********************/
+
+    #draggable-elem1 {
+        width: 35%;
+        height: auto;
+        position: fixed;
+        transform: rotate(-10deg);
+        left: 60%;
+        top: 60%;
+    }
+
+    #draggable-elem2 {
+        width: 35%;
+        height: auto;
+        position: fixed;
+        left: 62%;
+        top: 21%;
+        animation-name: spin;
+        animation-duration: 5000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .herosection {
+        ::selection {
+            background: #E80E5B;
+            color: black
+        }
+    }
+
+    #draggable-elem3 {
+        width: 20%;
+        height: auto;
+        position: fixed;
+        left: 30%;
+        top: 23%;
+    }
+
+    #draggable-elem4 {
+        width: 30%;
+        height: auto;
+        position: fixed;
+        left: 5%;
+        top: 53%;
+        animation-name: spin-green;
+        animation-duration: 7000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: reverse;
+    }
+
+    @keyframes spin-green {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    #draggable-elem5 {
+        width: 25%;
+        height: auto;
+        position: fixed;
+        left: 30%;
+        top: 70%;
+    }
+
+    #draggable-elem6 {
+        width: 40%;
+        height: auto;
+        position: fixed;
+        left: 55%;
+        top: 74%;
+    }
+
+    #draggable-elem7 {
+        position: fixed;
+        left: 19%;
+        top: 58%;
+        z-index: -1;
+        width: 60%;
+        height: auto;
+    }
+
+    #draggable-elem8 {
+        position: fixed;
+        left: -20%;
+        bottom: -13%;
+        width: 70%;
+        height: auto;
+    }
+
+    #draggable-elem9 {
+        width: 63%;
+        height: auto;
+        position: fixed;
+        left: -25%;
+        top: 10%;
+    }
+
+    /* WORK PAGE-MOBILE */
+    h1 {
+        width: 85%;
+        height: auto;
+        margin: auto;
+        padding-top: 32vw;
+        margin-bottom: 6.5vw;
+        font-size: 1.25rem;
+        color: #012F05;
+    }
+
+    .works {
+        padding-bottom: 9rem;
+        position: relative;
+        display: grid;
+        width: 85%;
+        margin: auto;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1%;
+    }
+
+    .hashtags {
+        box-sizing: border-box;
+        display: inline-block;
+        height: 30px;
+        width: auto;
+        border: 1px solid #000;
+        text-align: center;
+        padding: 5px;
+        border-radius: 13px;
+        font-size: 0.875rem;
+    }
+
+    .workimages {
+        margin-bottom: 3vw;
+    }
+
+    .project-names {
+        margin-bottom: 3vw;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    .number {
+        margin-bottom: 0.9vw;
+        font-size: 0.625rem;
+        font-weight: 400;
+    }
+
+    .content-container {
+        width: 85%;
+        margin: auto;
+    }
+
+    /***********ABOUT PAGE *********************/
+
+    #row-one-about {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 4vw;
+        width: 60%;
+        margin: auto;
+    }
+
+    .content-about {
+        font-size: 0.875rem;
+        line-height: normal;
+        text-align: center;
+        text-transform: lowercase;
+        padding-bottom: 4vw;
+    }
+
+    .aboutimages {
+        width: 100%;
+    }
+
+    #about1 {
+        margin-bottom: 8vw;
+    }
+
+    #about1 {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    #below-about {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-title {
+        font-size: 1.25rem;
+        color: #E48F2B;
+        font-weight: 700;
+        margin-bottom: 6vw;
+        text-align: center;
+    }
+
+    .content-main {
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin-bottom: 1vw;
+        text-align: center;
+    }
+
+    .card-about-title {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2vw;
+    }
+
+    .content-strength {
+        text-align: center;
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 4vw;
+    }
+
+    /*********** CONTACT PAGE *********************/
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 0.07rem solid #838383;
+        background-color: transparent;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        margin-top: 0.6rem;
+        margin-bottom: 1.4rem;
+        resize: vertical
+    }
+
+    input[type=submit] {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #012F05;
+        color: white;
+        margin-top: 2rem;
+        padding: 0.6rem 3rem;
+        border: none;
+        border-radius: 18px;
+        cursor: pointer;
+    }
+
+    #contact-fill {
+        font-size: 0.875rem;
+        line-height: normal;
+        text-transform: lowercase;
+        padding-bottom: 2.5rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    .contact-form-text {
+        font-size: 0.875rem;
+        font-weight: 400;
+    }
+
+    /*********** PROJECT DETAIL *********************/
+
+    .images {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1vw;
+    }
+
+    .detail-number {
+        font-weight: 400;
+        font-size: 0.6875rem;
+    }
+
+    .content-container {
+        width: 85%;
+        margin: auto
+    }
+
+    .project-about {
+        padding: 3vw 0 4vw 0;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .credit {
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 0.875rem;
+        gap: 0 6vw;
+        padding: 5vw 0 8vw 0;
+    }
+
+    .column-left {
+        font-weight: 600;
+        text-align: right;
+    }
+
+    .back-to-top {
+        margin: 10vw 0 6vw 0;
+        text-align: center;
+        font-size: 0.75rem;
+    }
+}
